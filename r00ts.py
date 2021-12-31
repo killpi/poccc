@@ -1,5 +1,5 @@
 import requests
-from common.open_target_url import *
+from common.open_target_file import *
 def title():
     print('+------------------------------------------')
     print('r00ts文件上传wehshell默认口令')
@@ -44,7 +44,7 @@ Content-Disposition: form-data; name="ZSnXu"
 
 if __name__ == '__main__':
     target_path = "D://git/poccc/targets/r00ts.txt"
-    url_list = open_url_file(target_path)
+    url_list = open_url(target_path)
     bingo = []
 
     for url in url_list:

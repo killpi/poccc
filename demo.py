@@ -1,9 +1,10 @@
 import requests
 from common.check import *
-from common.open_target_url import *
+from common.open_target_file import *
 
 def poc1(url):
     payload = ""
+    target_url = url + payload
     headers = {
         'User-Agent': 'Mozilla/5.0 (X11; CrOS x86_64 13904.16.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.25 Safari/537.36',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
@@ -23,7 +24,7 @@ if __name__ == '__main__':
     target_path = "D://git/poccc/targets/1.txt"
     bingo = []
 
-    url_list = open_url_file(target_path)
+    url_list = open_url(target_path)
 
     for url in url_list:
         poc1(url_agreement_check(url))
